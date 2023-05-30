@@ -6,9 +6,11 @@
     color: white;
     text-decoration: none;
     list-style: none;
+    outline: none;
 }
 body{
     background: linear-gradient(315deg, #6B73FF 0%, #000DFF 100%);
+    background-repeat: no-repeat;
 }
 .avisoResponsividade{
     width: 100vw;
@@ -110,7 +112,7 @@ body{
         display: flex;
         justify-self: center;
         align-items: center;
-       
+       cursor: pointer;
         border-radius: 16px;
     }
     .btnGet p{
@@ -145,13 +147,12 @@ body{
         height: 100vh;
         position: absolute;
         top: 0;
-    /* opacity: 0.75; */    
-    z-index: 1;
+        z-index: 1;
     }
     .paginaLogin.ativo{
         transform: translateX(0%);
         opacity: 1;
-
+        
     }
     /* Tela Login */
     .ConteinerLogin{
@@ -178,7 +179,6 @@ body{
         height: 66px;
         border-radius: 50%;
         background: linear-gradient(135deg, #FDEB71 0%, #F8D800 100%);
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -190,6 +190,7 @@ body{
         
     }
     .logarCom{
+        z-index: 2;
         display: flex;
         
     }
@@ -201,7 +202,7 @@ body{
         position: relative;
         top: 45%;
         left: 50%;
-        transform: translate(-50% , -150%);
+        transform: translate(-50% , -200%);
     }
     .dadosLogar{
         top: 65%;
@@ -220,9 +221,9 @@ body{
         font-size: 13px;
         color: #000;
         padding-left: 45px;
-
+        
     }
-
+    
     ::placeholder{
         color: #000;
     }
@@ -234,59 +235,138 @@ body{
         display: flex;
         justify-self: center;
         margin-bottom: 20px;
-
+        
     }
-
+    
     .prset-Input-area i{
-
+        
         font-size: 18px;
         position: absolute;
-       
+        
         color: #000;
         left: 5%;
+    }
+    .esuqueciSenha{
+        text-align: right;
+        /* background-color: red; */
+        font-weight: 600;
+        font-size: 13px;
+    }
+    .BTN-SignIn{
+        background: linear-gradient(135deg, #FDEB71 0%, #F8D800 100%);
+        border-radius: 16px;
+        width: inherit;
+        height: 64px;
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        
+        margin-top: 15px;
+        align-items: center;
+        margin-bottom: 25px;
+        cursor: pointer;
+    }
+    .BTN-SignIn p{
+        font-weight: 700;
+        font-size: 14px;
+        color: #191A1D;
+    }
+    .Dont-have-an-account{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 200;
+        /* align-items: center; */
+        /* width: 350px; */
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+        
+    }
+    .conteiner.desativar{
+        position: absolute;
+        transform: translate(-165% , -50%);
    }
-   .esuqueciSenha{
-    text-align: right;
-    /* background-color: red; */
-    font-weight: 600;
-font-size: 13px;
-   }
-   .BTN-SignIn{
-    background: linear-gradient(135deg, #FDEB71 0%, #F8D800 100%);
-border-radius: 16px;
-width: inherit;
-height: 64px;
-/* text-align: center; */
-display: flex;
-justify-content: center;
-
-margin-top: 15px;
-align-items: center;
-margin-bottom: 25px;
-cursor: pointer;
-   }
-   .BTN-SignIn p{
-    font-weight: 700;
-font-size: 14px;
-color: #191A1D;
-   }
-   .Dont-have-an-account{
-    font-family: 'Inter';
-font-style: normal;
-font-weight: 200;
-/* align-items: center; */
-/* width: 350px; */
-/* background-color: red; */
-display: flex;
-justify-content: center;
-font-size: 13px;
-
-   }
-   .conteiner.desativar{
-    position: absolute;
-    transform: translate(-165% , -50%);
-   }
-
- 
+   .mensagem-Erro{
+       width: 280px;
+       border-radius: 15px;
+       height: 200px;
+       background-color: white;
+       position: absolute;
+       top: 170%;
+       
+       left: 50%;
+       z-index: 3;
+       transform: translate(-50% , -50%);
+       text-align: center;
+       align-items: center;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       transition: 1s;
+       cursor: pointer;
+    }
     
+    .mensagem-Erro.ativo{
+        
+        transform: translate(-50% , -50%);
+        top: 50%;
+        left: 50%;
+    }
+    .fa-circle-xmark{
+        color: red;
+        font-size: 55px;
+        font-weight: 100;
+        margin-top: 5px;
+    }
+    .mensagem-Erro p{
+        color: #504c4c;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+    .filter-opacidade{
+       transition: all 500ms;
+
+        opacity: 0;
+    }
+    .filter-opacidade.ativo{
+        opacity: 0.70;    
+        background-color: #000000;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        position: absolute;
+       transition: all 500ms;
+
+    }
+    .ok{
+        margin-top: 15px;
+        width: 170px;
+        height: 40px;
+        font-weight: 700;
+        background-color: #13e784;
+        color: #ffffff;
+        border-radius: 15px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .ok i{
+        padding-left: 3px;
+    }
+    .ok p{
+        width: inherit;
+        height: inherit;
+        text-align: center;
+        align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
 }

@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: linear-gradient(315deg, #6B73FF 0%, #000DFF 100%);
+    width: 100vw;
+    height: 100vh;
+    
+}
+.avisoResponsividade{
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    font-weight: 500;
+}
+.conteiner{
+    display: none;
+}
+.nav{
+    display: none;
+}
+@media screen and (max-width:500px) {
+    .avisoResponsividade{
+        display: none;
+    }
+    body{
+        overflow: hidden;
+    }
+    .nav{
+        height: 120px;
+        width: 100vw;
+        /* background-color: red; */
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #FFF;
+        
+    }
+    .menu{
+        height: 48px;
+        width: 48px;
+        background: #191a1d15;
+        margin-left: 24px;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        position: relative;
+        justify-content: center;
+
+    }
+    .notficacao{
+         height: 48px;
+        width: 48px;
+        background: #191a1d15;
+        
+        margin-left: 0px;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .user{
+         height: 48px;
+        width: 48px;
+        background: #191a1d15;
+        /* border: 2px #fff solid; */
+        margin-right: 24px;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+    }
+    .intes-esuqerdo-menu{
+        display: flex;
+        gap: 15px;
+    }
+
+
+    /* .menu span{
+        display: block;
+        width: 15px;
+        height: 1px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        border: 1px solid #FFF;
+
+    }
+    /* Rotacionar */
+   /* .menu .linha-menu1{
+        transform: rotate(75deg);
+        
+    }
+    .menu .linha-menu2{
+        transform: rotate(150deg);
+    }  */
+
+
+    /* Personalização Conteiner */
+    @keyframes subirConteiner {
+        from{
+            transform: translate(0% , 100%);
+        }
+        to{
+            transform: translate(0 , 0);
+
+        }
+    }
+    .conteiner{
+        
+        width: 100vw;
+        height: 90vh;
+        border-radius: 32px 32px 0 0 ;
+        background-color: white;
+        animation: subirConteiner;
+        animation-duration: 1s;
+        color: #191A1D;
+        display: block;
+        
+    }
+    .ExploreTheBeautiful{
+        font-weight: 400;
+        font-size: 26px;
+        width: 201px;
+        margin-bottom: 27px;
+
+    }
+    
+    .itens-conteiner{
+        margin-left: 24px;
+        padding-top: 40px;
+        /* background-color: red; */
+    }
+    .subTituloExploreTheBeautiful{
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        width: 340px;
+        /* background-color: red; */
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    .subTituloExploreTheBeautiful a{
+        font-weight: 500;
+        color: linear-gradient(315deg, #6B73FF 0%, #000DFF 100%);
+    }
+    /* Personalizando Lugar Viagem */
+
+    .escolher-viagem{
+        width: 253px;
+        height: 400px;
+        /* background-color: rgba(255, 0, 0, 0.363); */
+        border-radius: 24px ;
+        box-shadow: 0px 8px 64px rgba(0, 0, 0, 0.1);
+    }
+    .bkg-viagem1{
+        border-radius: 24px ;
+
+        height: 240px;
+        color: white;
+        width: inherit;
+        background-image: url("/img/image-Viagem1.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+    }
+    .bkg-viagem2{
+        border-radius: 24px ;
+
+        height: 240px;
+        color: white;
+        width: inherit;
+        background-image: url("/img/image-Viagem2.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+    }
+    .categoriaViaem{
+        width: 90.87px;
+        height: 31px;
+        font-weight: 600;
+        font-size: 11px;
+        background: #6b72ff28;
+      /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:100px ;
+        margin-bottom: 8px;
+    }
+    .categoriaViaem a{
+        color: #000DFF;
+    }
+    .escolher-viagem h1{
+        width: 213px;
+        font-weight: 700;
+font-size: 14px;
+    }
+    .alinhamento-Viagem{
+        padding-left: 16px;
+
+    }
+    .carrocel{
+        display: flex;
+        gap: 24px;
+    }
+    .star{
+        font-size: 13px;
+        color:#F8D800 ; 
+     }
+     .avaliacao{
+        margin-top: 16px;
+     }
+     .avaliacao p{
+        font-size: 11px;
+        margin-top: 8px;
+     }
+     .nav-inferior{
+        background-color: red;
+        height: 10%;
+        width: 100vw;
+        font-size: 24px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+     }
+    
+}
