@@ -3,6 +3,7 @@ let login = document.querySelector(".BTN-SignIn");
 let tetarNovamente = document.querySelector(".ok")
 let opacidadeFundo = document.querySelector(".filter-opacidade");
 let msgErro = document.querySelector(".mensagem-Erro");
+let iconsMenuInferior = document.querySelectorAll(".nav-inferior .fa-solid")
 login.addEventListener("click" , () =>{
     let password = document.getElementById("password").value;
     let user = document.getElementById("user").value;
@@ -14,6 +15,7 @@ login.addEventListener("click" , () =>{
     else{
         msgErro.classList.add("ativo")
         opacidadeFundo.classList.add("ativo")
+        
     }
 })
 tetarNovamente.addEventListener("click", () => {

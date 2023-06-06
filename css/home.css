@@ -5,6 +5,7 @@
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     list-style: none;
+    /* cursor: none; */
 }
 body{
     background: linear-gradient(315deg, #6B73FF 0%, #000DFF 100%);
@@ -56,6 +57,7 @@ body{
         display: flex;
         position: relative;
         justify-content: center;
+        overflow: hidden;
 
     }
     .notficacao{
@@ -119,7 +121,7 @@ body{
         }
     }
     .conteiner{
-        
+        overflow: hidden;
         width: 100vw;
         height: 90vh;
         border-radius: 32px 32px 0 0 ;
@@ -164,6 +166,7 @@ body{
         /* background-color: rgba(255, 0, 0, 0.363); */
         border-radius: 24px ;
         box-shadow: 0px 8px 64px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
     }
     .bkg-viagem1{
         border-radius: 24px ;
@@ -190,8 +193,8 @@ body{
         margin-bottom: 15px;
     }
     .categoriaViaem{
-        width: 90.87px;
-        height: 31px;
+        width: 96.87px;
+        height: 36px;
         font-weight: 600;
         font-size: 11px;
         background: #6b72ff28;
@@ -217,6 +220,7 @@ font-size: 14px;
     .carrocel{
         display: flex;
         gap: 24px;
+        margin-bottom: 15px;
     }
     .star{
         font-size: 13px;
@@ -230,13 +234,119 @@ font-size: 14px;
         margin-top: 8px;
      }
      .nav-inferior{
-        background-color: red;
+        /* background-color: red; */
         height: 10%;
         width: 100vw;
         font-size: 24px;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        position: absolute;
+        bottom: 0;
      }
-    
+     .nav-inferior i{
+        color: rgba(25, 26, 29, 0.25);
+        padding: 15px;
+    }
+    .fa-house.active{
+        color :linear-gradient(135deg, #FDEB71 0%, #F8D800 100%);
+        background: linear-gradient(315deg, #6B73FF 0%, #000DFF 100%);
+        border-radius: 50%;
+        
+
+     }
+    .conteinerViagem1{
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        position: absolute;
+        transition: 900ms;
+        transform: translateY(0);
+        overflow:visible ;
+    }
+    .conteinerViagem1.selecionado{
+        transform: translateY(-105%);
+    }
+    .bkg-img-selecionado{
+        background-image: url("/img/img_viagem\ 3.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 330px;
+        z-index: 3;
+        
+    }
+    .conteiner-fundo-branco{
+        background-color: #fff  ;
+        border-radius: 32px 32px 0 0 ;
+        width: 100vw;
+        height: 75vh;
+        z-index: 4;
+        position: absolute;
+        top: 35%;
+    }
+    .conteiner-itens-vaigem{
+        margin-left: 27px;
+        margin-top: 40px;
+        width: 327px;
+    }
+    .titulo-viagem{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        width: inherit;
+        margin-bottom: 15px;
+    }
+    .localizacao{
+        color: rgba(25, 26, 29, 0.75);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+    }
+    .caracteristica-do-local{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    /* Descrição */
+
+    .descricao h1{
+        color: #191A1D;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .descricao p{
+        color: rgba(25, 24, 37, 0.75);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .descricao{
+        margin-bottom: 15px;
+    }
+    .comprar{
+       
+        position: absolute;
+        width: 327px;
+        height: 64px;
+        background: linear-gradient(135deg, #FDEB71 0%, #F8D800 100%);
+        border-radius: 16px;
+    }
+    .comprar h1{
+        color: #191A1D;
+        width: inherit;
+        height: inherit;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
 }
