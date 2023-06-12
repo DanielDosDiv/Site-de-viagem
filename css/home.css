@@ -174,7 +174,7 @@ body{
         height: 240px;
         color: white;
         width: inherit;
-        background-image: url("/img/image-Viagem1.png");
+        background-image: url("/site de viagem/img/image-Viagem1.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -186,7 +186,7 @@ body{
         height: 240px;
         color: white;
         width: inherit;
-        background-image: url("/img/image-Viagem2.png");
+        background-image: url("/site de viagem/img/image-Viagem2.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -260,35 +260,44 @@ font-size: 14px;
         height: 100vh;
         z-index: 2;
         position: absolute;
-        transition: 900ms;
-        transform: translateY(0);
-        overflow:visible ;
+        transition: 1s;
+        top: 110%;
+        overflow:auto;
     }
     .conteinerViagem1.selecionado{
-        transform: translateY(-105%);
-    }
-    .bkg-img-selecionado{
-        background-image: url("/img/img_viagem\ 3.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 330px;
-        z-index: 3;
+        top: 0%;
         
     }
+    .bkg-img-selecionado{
+        
+        width: inherit;
+        height: 310px;
+
+        top: 0px;
+        /* overflow: hidden; */
+        z-index: 1;
+    }
+    .bkg-img-selecionado img{
+        width: inherit;
+        height: inherit;
+    }
     .conteiner-fundo-branco{
-        background-color: #fff  ;
+        background-color: #fff;
         border-radius: 32px 32px 0 0 ;
         width: 100vw;
-        height: 75vh;
-        z-index: 4;
+        height: 70vh;
+        z-index: 5;
         position: absolute;
-        top: 35%;
+        bottom: -10%;
+        /* background-color: red; */
     }
     .conteiner-itens-vaigem{
-        margin-left: 27px;
-        margin-top: 40px;
+        position: absolute;
+        left: 50%;
+        top: 43%;
+        transform: translate(-50% , -50%);
         width: 327px;
+        /* background-color: red; */
     }
     .titulo-viagem{
         font-style: normal;
@@ -347,6 +356,71 @@ font-size: 14px;
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
+    }
+    .menu-lateral{
+        width: 60%;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        
+        transform: translateX(-100%);
+        transition: 500ms;
+    }
+    .menu-lateral.active{
+        transform: translateX(0%);
+    }
+    .menu-lateral-conteiner{
+        
+        /* background-color: red; */
+        width: 150px;
+        
+        position: relative;
+        font-size: 8px;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50% , -50%);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .menu-lateral-conteiner h1{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .mudar-tema{
+        width: 70px;
+        height: 30px;
+        background-color: #7c7979;
+        border-radius: 15px;
+        transition: 500ms;
+    }
+    .mudar-tema.ativado{
+        background-color: #fcdf27;
+    }
+    .mudar-tema span{
+        display: block;
+        width: 23px;
+        height: 23px;
+        background-color: #f7f7f7;
+        align-items: center;
+        display: flex;
+        
+        justify-content: center;
+        border-radius: 50%;
+        /* posição desativado */
+        margin-top: 3px;
+        margin-left: 7px;
+        transition: 500ms;
+
+    }
+    .mudar-tema span.ativado{
+        margin-left: 40px;
+        background-color: #191A1D;
+        color: white;
+    }
+    .menu-lateral{
+        display: none;
     }
 
 }

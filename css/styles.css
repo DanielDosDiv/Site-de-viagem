@@ -285,7 +285,7 @@ body{
     }
     .conteiner.desativar{
         position: absolute;
-        transform: translate(-165% , -50%);
+        transform: translate(-180% , -50%);
    }
    .mensagem-Erro{
        width: 280px;
